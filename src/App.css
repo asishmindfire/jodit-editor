@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+  font-family: sans-serif;
+  /* text-align: center; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.merge-field-popup {
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.merge-field-label {
+  width: 250px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.merge-field-select {
+  width: 250px;
+}
+
+.merge-field-select-option {
+  font-size: 16px;
+  padding: 3px;
+  background: #333;
+}
+
+.merge-field-select-option-label {
+  font-size: 14px;
+  padding: 3px;
+  background: #666;
+}
+
+.merge-field {
+  font-weight: bold;
+}
+
+hr {
+  border-top: 1px dotted #000000 !important;
+}
+
+.page-break {
+  page-break-after: always;
   display: flex;
-  flex-direction: column;
+  height: 24px;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px dashed #ccc;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+@page {
+  margin: 1in;
+  height: 220px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all {
+}
+
+@media print {
+  body {
+    background: none;
   }
-  to {
-    transform: rotate(360deg);
+  .page-break {
+    visibility: hidden;
+    page-break-before: always;
+  }
+  .jodit-toolbar__box {
+    display: none;
   }
 }
